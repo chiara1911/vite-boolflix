@@ -1,8 +1,16 @@
 <template>
- 
-    <CardComponent v-for="(item,index) in store.movieList" :title="item.title" :img="item.poster_path" :vote="item.vote_average"/>
-    
-
+  <div class="container">
+    <h2>Movie</h2>
+    <div class="row">
+  <CardComponent
+    v-for="(item, index) in store.movieList"
+    :title="item.title"
+    :vote="item.vote_average"
+    :poster_path="item.poster_path"
+    :original_title="item.original_title"
+  />
+  </div>
+</div>
 </template>
 
 <script>
@@ -11,7 +19,7 @@ import CardComponent from "./CardComponent.vue";
 
 export default {
   name: "MainComponent",
-  
+
   data() {
     return {
       store,

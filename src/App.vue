@@ -26,7 +26,7 @@ export default {
       console.log(search);
       if (search) {
         this.params = {
-          title: search,
+          params: search,
         }
       }     
      
@@ -39,7 +39,9 @@ export default {
       axios.get(movieUrl, { params: this.store.params }).then((res) => {
         console.log(res.data.results);
         this.store.movieList = res.data.results;
-      });
+      })
+    },
+    getSeries(){
       const seriesUrl = store.apiUrl + this.store.endPoint.series;
       axios.get(seriesUrl, { params: this.store.params }).then((res) => {
         console.log(res.data.results);
@@ -49,6 +51,7 @@ export default {
   },
   created() {
     this.getMovies();
+    this.getSeries();
   },
 };
 

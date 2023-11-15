@@ -1,12 +1,16 @@
 <template>
-    <div class="row">     
-      
-        <section id="tv" class="d-flex flex-column flex-wrap" >
-            <span>{{title }}</span>    
+          
+        <div class="col-2 m-3 border">
+        <section class="d-flex flex-column" >
+            <img :src="`https://image.tmdb.org/t/p/w300` + poster_path" :alt="title">
+            <div class="text-center d-flex flex-column ">
+            <span> {{title }}</span>    
             <span>{{ original_title }}</span>
-            <span>vote :{{ vote }}</span>     
+            <span>vote: {{ vote }}</span>    
+        </div> 
         </section>
-      </div>
+    </div>
+ 
     
 </template>
 
@@ -19,11 +23,9 @@ export default {
      name: "CardComponent",
      props: {
         title  : String,
-        original_title: String,
-        poster_path: String,
-        vote: Number
-
-    
+        original_title: String,        
+        vote: Number,
+        poster_path: String   
     },
     components: {
         store,
@@ -34,5 +36,8 @@ export default {
 
 <style scoped>
 
-
+span{
+    color: white;
+    text-transform: uppercase;
+}
 </style>
