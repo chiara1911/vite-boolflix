@@ -28,7 +28,9 @@ export default {
         this.params = {
           params: search,
         }
-      }     
+      }     else{
+        this.params=null
+      }
      
 
       this.getCharacters();

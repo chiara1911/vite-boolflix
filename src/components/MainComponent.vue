@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2>Movie</h2>
+    <h2 class="text-danger">Movie</h2>
     <div class="row">
   <CardComponent
     v-for="(item, index) in store.movieList"
