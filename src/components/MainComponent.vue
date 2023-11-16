@@ -14,10 +14,10 @@
           :language="item.original_language"
         />
       </div>
-      <div class="row">
-        <h2 class="text-danger text-uppercase">Serie tv</h2>
+      <h2 class="text-danger text-uppercase">Serie tv</h2>
+      <div class="row">        
       <div
-        class="col-12 border bg-black d-flex flex-row flex-wrap">          
+        class="col-12 bg-black d-flex flex-row flex-wrap">          
           <CardComponent
             v-for="(item, index) in store.seriesList"
             :title="item.name"

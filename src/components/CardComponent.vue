@@ -1,11 +1,12 @@
 <template>         
        <div class="mx-1">
             <img :src="`https://image.tmdb.org/t/p/w300` + poster_path" :alt="title" class=" mx-2">
-            <div class="text-center d-flex flex-column  pt-3">
-            <h6> {{title }}</h6>               
-            <!-- <h6 class="text-uppercase">{{language }}</h6> -->
+            <div class="d-flex flex-column align-items-center justify-content-center pt-3">
+            <h6> {{title }}</h6>           
          <img :src="getFlag" :alt="language + ' flag'" class="flag" id="img-flag">
-            <h6>vote: {{ vote }}</h6>    
+            <div class="d-flex flex-row text-warning ">
+                <i v-for ="n in 5" :key="n" class="fa-star" :class="(n <= getVote) ? 'fa-solid' : 'fa-regular'"></i>
+            </div>
         </div> 
         </div>
     
@@ -49,12 +50,17 @@ export default {
      },
      computed:{
         getFlag(){
-            let flag= `public/img/${this.language}.svg`;
+            let flag= `/img/${this.language}.svg`;
             if(!this.flags.includes(this.language)){
-                flag= 'public/img/null.png'
+                flag= '/img/null.png'
             }
             return flag;
-     }
+     },
+     getVote(){
+return Math.ceil(this.vote / 2)
+
+     },
+     
  }
 }
 </script>
