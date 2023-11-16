@@ -23,18 +23,14 @@ export default {
  
   methods: {
 
-    setParams(search) {
-      console.log('params ' + search);
-      if (search) {
-        this.params = {
-          params: search,
-        }
-      }     else{
-        this.params=null
-      }
+    setParams() {
+     
+      if (!store.params.query) {
+       return
+      }    
      
 this.getMovies(),
-console.log('get ' + getMovies)
+
 this.getSeries()
    
     },
@@ -42,9 +38,9 @@ this.getSeries()
     getMovies() {
       const movieUrl = store.apiUrl + this.store.endPoint.movies ;
       axios.get(movieUrl, { params: this.store.params }).then((res) => {
-        console.log('res ' + res.data.results);
+        console.log('resMovie ' + res.data.results);
         this.store.movieList = res.data.results;
-      })
+    })   
     },
     getSeries(){
       const seriesUrl = store.apiUrl + this.store.endPoint.series;

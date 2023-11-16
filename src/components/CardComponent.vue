@@ -6,6 +6,7 @@
             <div class="text-center d-flex flex-column  pt-3">
             <h6> {{title }}</h6>    
             <h6>{{ original_title }}</h6>
+            <h6 class="text-uppercase">{{ original_language }}</h6>
             <h6>vote: {{ vote }}</h6>    
         </div> 
         </section>
@@ -25,7 +26,9 @@ export default {
         title  : String,
         original_title: String,        
         vote: Number,
-        poster_path: String   
+        poster_path: String,
+        original_language: String
+   
     },
     components: {
         store,

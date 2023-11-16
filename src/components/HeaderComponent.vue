@@ -11,7 +11,7 @@
           class="form-control"
           placeholder="Cerca"
           aria-label="Cerca"
-          aria-describedby="button-addon2" v-model="typeSelect"
+          aria-describedby="button-addon2" v-model="store.params.query"
         />
         <button
           class="btn bg-danger"
@@ -31,13 +31,13 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-      typeSelect: "",
+     
       store,
     };
   },
   methods: {
     passData() {
-      this.$emit("filterChange", this.typeSelect);
+      this.$emit("filterChange");
     },
   },
 };

@@ -8,6 +8,7 @@
     :vote="item.vote_average"
     :poster_path="item.poster_path"
     :original_title="item.original_title"
+    :original_language="item.original_language"
   />
   </div>
 </div>
