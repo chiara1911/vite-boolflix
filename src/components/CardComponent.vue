@@ -7,7 +7,7 @@
             <h6> {{title }}</h6>    
             <h6>{{ original_title }}</h6>
             <!-- <h6 class="text-uppercase">{{language }}</h6> -->
-            <img :src="`https://flagsapi.com/` + language.toUppercase + `/flat/64.png`" alt="">
+            <img :src="`https://flagsapi.com/${this.language.toUpperCase()}/flat/64.png`" :alt="this.language" id="img-flag">
             <h6>vote: {{ vote }}</h6>    
         </div> 
         </section>
@@ -40,6 +40,16 @@ export default {
 // flag
 //         }
 //     }
+computed: {
+    theFlag() {
+       if (this.language = n ) {
+          return `https://flagsapi.com/${this.language.toUpperCase()}/flat/10.png`
+       }
+       else {
+          return null
+      }
+   }
+}
  }
 </script>
 
@@ -49,5 +59,9 @@ h6{
     color: white;
     text-transform: uppercase;
     font-size: 0.7rem;
+}
+
+#img-flag{
+    height: 40px;
 }
 </style>
