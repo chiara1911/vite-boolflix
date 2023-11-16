@@ -8,9 +8,20 @@
     :vote="item.vote_average"
     :poster_path="item.poster_path"
     :original_title="item.original_title"
-    :original_language="item.original_language"
+    :language="item.original_language"
+  />
+  <h2 class="text-danger">Serie tv</h2>
+    <div class="row">
+      <CardComponent
+    v-for="(item, index) in store.seriesList"
+    :title="item.name"
+    :vote="item.vote_average"
+    :poster_path="item.poster_path"
+    :original_title="item.original_name"
+    :language="item.original_language"
   />
   </div>
+</div>
 </div>
 </template>
 

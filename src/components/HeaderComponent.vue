@@ -4,19 +4,20 @@
   >
     <h1 class="text-danger text-uppercase px-2">boolflix</h1>
     <div class="p-2">
-    
       <div class="input-group mb-3">
         <input
           type="text"
           class="form-control"
           placeholder="Cerca"
           aria-label="Cerca"
-          aria-describedby="button-addon2" v-model="store.params.query"
+          aria-describedby="button-addon2"
+          v-model="store.params.query"
         />
         <button
           class="btn bg-danger"
           type="button"
-          id="button-addon2" @click="passData"
+          id="button-addon2"
+          @click="passData"
         >
           cerca
         </button>
@@ -31,7 +32,6 @@ export default {
   name: "HeaderComponent",
   data() {
     return {
-     
       store,
     };
   },
