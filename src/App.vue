@@ -20,10 +20,11 @@ export default {
       axios,
     };
   },
+ 
   methods: {
 
     setParams(search) {
-      console.log(search);
+      console.log('params ' + search);
       if (search) {
         this.params = {
           params: search,
@@ -32,14 +33,16 @@ export default {
         this.params=null
       }
      
-
-      this.getCharacters();
+this.getMovies(),
+console.log('get ' + getMovies)
+this.getSeries()
+   
     },
 
     getMovies() {
-      const movieUrl = store.apiUrl + this.store.endPoint.movies;
+      const movieUrl = store.apiUrl + this.store.endPoint.movies ;
       axios.get(movieUrl, { params: this.store.params }).then((res) => {
-        console.log(res.data.results);
+        console.log('res ' + res.data.results);
         this.store.movieList = res.data.results;
       })
     },
@@ -53,11 +56,12 @@ export default {
   },
   created() {
     this.getMovies();
+
     this.getSeries();
   },
 };
 
-// }
+
 </script>
 
 <style lang="scss" scoped></style>
