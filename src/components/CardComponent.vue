@@ -6,7 +6,8 @@
             <div class="text-center d-flex flex-column  pt-3">
             <h6> {{title }}</h6>    
             <h6>{{ original_title }}</h6>
-            <h6 class="text-uppercase">{{language }}</h6>
+            <!-- <h6 class="text-uppercase">{{language }}</h6> -->
+            <img :src="`https://flagsapi.com/` + language.toUppercase + `/flat/64.png`" alt="">
             <h6>vote: {{ vote }}</h6>    
         </div> 
         </section>

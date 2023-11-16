@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-danger">Movie</h2>
+    <h2 class="text-danger text-uppercase ">Movie</h2>
     <div class="row">
   <CardComponent
     v-for="(item, index) in store.movieList"
@@ -10,7 +10,7 @@
     :original_title="item.original_title"
     :language="item.original_language"
   />
-  <h2 class="text-danger">Serie tv</h2>
+  <h2 class="text-danger text-uppercase ">Serie tv</h2>
     <div class="row">
       <CardComponent
     v-for="(item, index) in store.seriesList"
