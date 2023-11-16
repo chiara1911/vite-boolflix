@@ -1,17 +1,14 @@
-<template>
-          
-        <div class="col-2 m-3 border bg-black ">
-        <section class="d-flex flex-column align-content-between justify-content-between" >
-            <img :src="`https://image.tmdb.org/t/p/w300` + poster_path" :alt="title">
+<template>         
+       <div class="mx-1">
+            <img :src="`https://image.tmdb.org/t/p/w300` + poster_path" :alt="title" class=" mx-2">
             <div class="text-center d-flex flex-column  pt-3">
-            <h6> {{title }}</h6>    
-            <h6>{{ original_title }}</h6>
+            <h6> {{title }}</h6>               
             <!-- <h6 class="text-uppercase">{{language }}</h6> -->
-            <img :src="`https://flagsapi.com/${this.language.toUpperCase()}/flat/64.png`" :alt="this.language" id="img-flag">
+         <img :src="getFlag" :alt="language + ' flag'" class="flag" id="img-flag">
             <h6>vote: {{ vote }}</h6>    
         </div> 
-        </section>
-    </div>
+        </div>
+    
  
     
 </template>
@@ -35,22 +32,31 @@ export default {
         store,
         axios
     },
-//     data(){
-//         return{
-// flag
-//         }
-//     }
-computed: {
-    theFlag() {
-       if (this.language = n ) {
-          return `https://flagsapi.com/${this.language.toUpperCase()}/flat/10.png`
-       }
-       else {
-          return null
-      }
-   }
-}
+
+     data(){
+        return{
+            flags:[
+                'ca',
+                'de',
+                'fr',
+                'en',
+                'it',
+                'jp',
+                'kr',
+                'us',
+            ]
+        }
+     },
+     computed:{
+        getFlag(){
+            let flag= `public/img/${this.language}.svg`;
+            if(!this.flags.includes(this.language)){
+                flag= 'public/img/null.png'
+            }
+            return flag;
+     }
  }
+}
 </script>
 
 <style scoped>
@@ -62,6 +68,7 @@ h6{
 }
 
 #img-flag{
-    height: 40px;
+    height: 20px;
 }
+
 </style>

@@ -12,12 +12,14 @@
           aria-label="Cerca"
           aria-describedby="button-addon2"
           v-model="store.params.query"
+          @keyup.enter="passData"
         />
         <button
           class="btn bg-danger"
           type="button"
           id="button-addon2"
           @click="passData"
+          
         >
           cerca
         </button>
