@@ -12,12 +12,12 @@
     </ul>
   </div>
     <div class="p-2">
-      <div class="input-group mb-3">
+      <div class="input-group ">
         <input
           type="text"
-          class="form-control"
-          placeholder="Cerca"
-          aria-label="Cerca"
+          class="form-control m-auto"
+          placeholder=" Cerca film/serie tv"
+          aria-label=" Cerca film/serie tv"
           aria-describedby="button-addon2"
           v-model="store.params.query"
           @keyup.enter="passData"
@@ -29,7 +29,7 @@
           @click="passData"
           
         >
-          cerca
+          Cerca 
         </button>
       </div>
     </div>
