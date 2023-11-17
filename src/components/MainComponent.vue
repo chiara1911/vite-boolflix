@@ -3,7 +3,7 @@
     <h2 class="text-danger text-uppercase">Movie</h2>
     <div class="row">
       <div
-        class="col-12 bg-black d-flex flex-row flex-wrap"
+        class="col-12  bg-black d-flex flex-row flex-wrap"
       >
         <CardComponent
           v-for="(item, index) in store.movieList"

@@ -10,11 +10,5 @@ $fa-font-path: '../webfonts';
 
 body{
     background-color: grey;
-    img{
-        display: block;
-        width: 100%;        
-        object-fit: contain;
-        cursor: pointer;
-        height: 400px;
-    }
+
 }
