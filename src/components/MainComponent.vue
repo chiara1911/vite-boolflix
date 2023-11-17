@@ -11,10 +11,10 @@
           :vote="item.vote_average"
           :poster_path="item.poster_path"
           :original_title="item.original_title"
-          :language="item.original_language"
-        />
-      </div>
-      <h2 class="text-danger text-uppercase">Serie tv</h2>
+          :language="item.original_language" :overview="item.overview" />
+        
+     </div>
+      <h2 class= "text-danger text-uppercase">Serie tv</h2>
       <div class="row">        
       <div
         class="col-12 bg-black d-flex flex-row flex-wrap">          
@@ -24,13 +24,13 @@
             :vote="item.vote_average"
             :poster_path="item.poster_path"
             :original_title="item.original_name"
-            :language="item.original_language"
+            :language="item.original_language" :overview="item.overview"
           />
         </div>
       </div>
     </div>
- 
-</div>
+ </div>
+
 </template>
 
 <script>
