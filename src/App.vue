@@ -3,7 +3,7 @@
   <HeaderComponent @filter-change="setParams" />
   
     <div class="hero-content">
-      <h2 class="text-light text-center">Serie TV in evidenza</h2>
+      <!-- <h2 class="text-light text-center">Serie TV in evidenza</h2> -->
       <div class="content-video">
         <video controls autoplay muted class="position-absolute">
           <source
@@ -25,7 +25,7 @@
               <i class="fa-play fa-solid px-3 py-2"></i>riproduci
             </button>
             <button class="btn btn-secondary text-uppercase mx-1">
-              <i class="fa-solid fa-circle-info text-black px-3 py-2"></i>altre info
+              <i class="fa-solid fa-circle-info text-light px-3 py-2"></i>altre info
             </button>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default {
 <style lang="scss" scoped>
 header {
   width: 100%;
-height: 450px;
+height: 420px;
 }
 
 

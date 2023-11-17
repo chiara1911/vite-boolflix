@@ -3,7 +3,7 @@
     <div class="box-inner">
       <div class="front-card">
         <img
-          :src="`https://image.tmdb.org/t/p/w300` + poster_path"
+          :src="getCover"
           :alt="title" id="img-slide"
         />
       </div>
@@ -65,8 +65,15 @@ export default {
 
   computed: {
 
-    getSlide(){
-        const slide = `https://image.tmdb.org/t/p/w300` + poster_path;
+    getCover(){
+        let cover;
+        if(!this.poster_path){
+            cover="/img/netflix.png"
+        } else{
+            cover = `https://image.tmdb.org/t/p/w300` + this.poster_path;
+        }
+        return cover
+       
     },
     getFlag() {
       let flag = `/img/${this.language}.svg`;
