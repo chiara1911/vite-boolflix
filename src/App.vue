@@ -1,5 +1,10 @@
 <template>
+  
   <HeaderComponent @filter-change="setParams"/>
+  
+  <video controls autoplay >
+    <source src="/public/video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4">
+  </video>
   <MainComponent />
 </template>
 
@@ -22,9 +27,7 @@ export default {
   },
  
   methods: {
-
-    setParams() {
-     
+    setParams() {     
       if (!store.params.query) {
        return
       }    
@@ -60,4 +63,10 @@ this.getSeries()
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+video{
+  width: 100%;
+  object-fit: cover;
+display: block;
+  height: 600px;
+}</style>

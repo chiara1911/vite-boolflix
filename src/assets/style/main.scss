@@ -9,6 +9,13 @@ $fa-font-path: '../webfonts';
 @import 'bootstrap/scss/bootstrap';
 
 body{
-    background-color: grey;
+    background-color: #141414;
 
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
 }
