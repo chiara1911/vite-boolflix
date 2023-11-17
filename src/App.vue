@@ -1,10 +1,14 @@
 <template>
-  
-  <HeaderComponent @filter-change="setParams"/>
-  
-  <video controls autoplay >
-    <source src="/public/video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4">
+  <HeaderComponent @filter-change="setParams" />
+
+  <video controls autoplay muted>
+    <source class="position-relative"
+      src="/video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4"
+    />
+   <span id="text-video">hello</span>
   </video>
+
+  
   <MainComponent />
 </template>
 
@@ -25,30 +29,25 @@ export default {
       axios,
     };
   },
- 
-  methods: {
-    setParams() {     
-      if (!store.params.query) {
-       return
-      }    
-     
-this.getMovies(),
 
-this.getSeries()
-   
+  methods: {
+    setParams() {
+      if (!store.params.query) {
+        return;
+      }
+
+      this.getMovies(), this.getSeries();
     },
 
     getMovies() {
-      const movieUrl = store.apiUrl + this.store.endPoint.movies ;
+      const movieUrl = store.apiUrl + this.store.endPoint.movies;
       axios.get(movieUrl, { params: this.store.params }).then((res) => {
-      
         this.store.movieList = res.data.results;
-    })   
+      });
     },
-    getSeries(){
+    getSeries() {
       const seriesUrl = store.apiUrl + this.store.endPoint.series;
       axios.get(seriesUrl, { params: this.store.params }).then((res) => {
-       
         this.store.seriesList = res.data.results;
       });
     },
@@ -59,14 +58,24 @@ this.getSeries()
     this.getSeries();
   },
 };
-
-
 </script>
 
 <style lang="scss" scoped>
-video{
+video {
   width: 100%;
   object-fit: cover;
-display: block;
+  display: block;
   height: 600px;
-}</style>
+  position: relative;
+  z-index: 0;
+}
+
+#text-video{
+  position: absolute;
+  z-index: 2000;
+  width: 100px;
+  height: 100px;
+  color: white;
+  z-index: 10;
+}
+</style>

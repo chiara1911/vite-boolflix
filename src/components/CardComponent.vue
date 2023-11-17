@@ -7,7 +7,7 @@
           :alt="title" id="img-slide"
         />
       </div>
-      <div class="back-card overflow-y-hidden  ">
+      <div class="back-card overflow-y-auto ">
         <div
           class="d-flex flex-column align-items-center justify-content-center align-content-between  p-5"
         >
