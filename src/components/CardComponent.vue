@@ -22,7 +22,7 @@
             class="flag"
             id="img-flag"
           />
-          <div class="d-flex flex-row">
+          <div class="d-flex flex-row mt-3">
             <i
               v-for="n in 5"
               :key="n"

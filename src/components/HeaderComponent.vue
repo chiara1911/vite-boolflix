@@ -1,6 +1,6 @@
 <template>
   <div
-    class="m-5 bg-black p-auto d-flex flex-row justify-content-between align-content-between"
+    class=" bg-black p-auto d-flex flex-row justify-content-between align-content-between"
   ><div class="d-flex flex-row ">
     <h1 class="text-danger text-uppercase px-2">boolflix</h1>
     <ul class="m-2 d-flex flex-row justify-content-between align-content-between">
