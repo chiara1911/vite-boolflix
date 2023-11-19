@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div class="box-inner">
+    <div class="box-inner" >
       <div class="front-card">
         <img
           :src="getCover"
@@ -12,8 +12,9 @@
           class="d-flex flex-column align-items-center justify-content-center align-content-between  p-5"
         >
         <div class="text">
-          <h6>{{ title }}</h6>
-          <h6>{{ overview }}</h6>
+          <h5 class="text-uppercase">titolo: {{ title }}</h5>
+          <h6 :class="(this.title === this.original_title) ? 'd-none' :'d-block'"> titolo : {{ original_title }}</h6>
+          <h6>trama : <span class=" fst-italic text-lowercase text-capitalize">{{ overview }}</span></h6>
         </div>
         <div>
           <img
@@ -90,6 +91,10 @@ export default {
 </script>
 
 <style scoped>
+
+span{
+    font-size: 0.7rem;
+}
 i {
   color: yellow;
 }
@@ -115,7 +120,7 @@ h6 {
   background-color: transparent;
   width: calc(100% / 5);
   height: 400px;
-  border: 1px solid #eeeeee;
+  /* border: 1px solid #eeeeee; */
 }
 .box-inner {
   position: relative;

@@ -5,7 +5,8 @@
     <div class="hero-content">
       <!-- <h2 class="text-light text-center">Serie TV in evidenza</h2> -->
       <div class="content-video">
-        <video controls autoplay muted class="position-absolute">
+        <video autoplay controls
+         class="position-absolute">
           <source
             src="/video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4"
           />
@@ -13,7 +14,7 @@
         <div
           class="position-absolute w-50 p-5 d-flex flex-column flex-wrap align-content-end"
         >
-          <h2 class="text-uppercase text-light">suburraeterna</h2>
+          <h2 class="text-uppercase text-light">suburr&AElig;terna</h2>
           <h3 class="text-light">Oggi al n° 1 tra le serie TV</h3>
           <span class="text-light">
             Mentre il caos regna su Roma, le allenze consolidate sono a rischio
