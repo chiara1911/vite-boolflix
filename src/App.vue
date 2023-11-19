@@ -68,7 +68,7 @@ export default {
 
     getMovies() {
       const movieUrl = store.apiUrl + this.store.endPoint.movies;
-      axios.get(movieUrl, { params: this.store.params }).then((res) => {
+      axios.get(movieUrl, { params: this.store.params}).then((res) => {
         this.store.movieList = res.data.results;
       });
     },

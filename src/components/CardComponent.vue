@@ -13,7 +13,7 @@
         >
         <div class="text">
           <h5 class="text-uppercase">titolo: {{ title }}</h5>
-          <h6 :class="(this.title === this.original_title) ? 'd-none' :'d-block'"> titolo : {{ original_title }}</h6>
+          <h6 :class="(this.title === this.original_title) ? 'd-none' :'d-block'"> titolo originale : {{ original_title }}</h6>
           <h6>trama : <span class=" fst-italic text-lowercase text-capitalize">{{ overview }}</span></h6>
         </div>
         <div>
