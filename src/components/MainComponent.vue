@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="text-danger text-uppercase">Movie</h2>
+    <h2 class="text-danger text-uppercase" id="movies">Movie</h2>
     <div class="row">
       <div
         class="col-12 bg-black d-flex flex-row flex-wrap"
@@ -14,7 +14,7 @@
           :language="item.original_language" :overview="item.overview" />
         </div>
      </div>
-      <h2 class= "text-danger text-uppercase">Serie tv</h2>
+      <h2 class= "text-danger text-uppercase" id="series">Serie tv</h2>
       <div class="row">        
       <div
         class="col-12 bg-black d-flex flex-row flex-wrap">          

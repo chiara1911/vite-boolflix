@@ -21,7 +21,7 @@
             e le tensioni con i clan criminali emergenti aumentano. Il mondo di
             "Suburra" è a una svolta.</span
           >
-          <div class="d-flex flex-row">
+          <div class="d-flex flex-row mt-3">
             <button class="btn btn-light text-uppercase mx-1">
               <i class="fa-play fa-solid px-3 py-2"></i>riproduci
             </button>
@@ -117,4 +117,12 @@ video {
   height: 30px;
   color: red;
 }
+
+@media screen and (max-width:850px){
+    
+  .btn{
+    display: none;
+  }
+ 
+  }
 </style>

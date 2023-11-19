@@ -101,9 +101,10 @@ i {
 img{
         display: block;
         width: 100%;        
-        object-fit: cover;
+       object-fit: cover;        
         cursor: pointer;
-        height: 400px;
+        height: 300px;
+      
     }
 h6 {
   color: white;
@@ -119,8 +120,8 @@ h6 {
 .box {
   background-color: transparent;
   width: calc(100% / 5);
-  height: 400px;
-  /* border: 1px solid #eeeeee; */
+  height: 300px;
+  
 }
 .box-inner {
   position: relative;
@@ -148,5 +149,25 @@ h6 {
   background-color: black;
   color: #eeeeee;
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width:992px){
+
+    body{
+        font-size: 0.8rem;
+    }
+.box{
+    width: calc(100% / 3);
+    
+  }
+
+}
+@media screen and (max-width:768px){
+
+.box{
+    width: calc(100% / 3);
+    
+  }
+
 }
 </style>
