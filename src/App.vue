@@ -8,7 +8,7 @@
         <video autoplay controls muted
          class="position-absolute">
           <source
-            src="./video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4"
+            src="../docs/video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4"
           />
         </video>
         <div
