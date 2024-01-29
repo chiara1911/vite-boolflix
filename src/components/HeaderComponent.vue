@@ -10,6 +10,7 @@
       <li><a href="#" class="m-2">Nuovi e popolari</a></li>
       <li><a href="#" class="m-2">La mia Lista</a></li>
     </ul>
+    
   </div>
     <div class="p-2">
       <div class="input-group ">
@@ -48,7 +49,9 @@ export default {
   methods: {
     passData() {
       this.$emit("filterChange");
+      return this.passData
     },
+    
   },
 };
 </script>

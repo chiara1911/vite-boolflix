@@ -1,11 +1,13 @@
 <template>
   <div class="container">
     <h2 class="text-danger text-uppercase" id="movies">Movie</h2>
+
     <div class="row">
+
       <div
         class="col-12 bg-black d-flex flex-row flex-wrap"
-      >
-        <CardComponent 
+      > 
+        <CardComponent
           v-for="(item, index) in store.movieList"
           :title="item.title"
           :vote="item.vote_average"
@@ -13,12 +15,12 @@
           :original_title="item.original_title"
           :language="item.original_language" :overview="item.overview" />
         </div>
-     </div>
+   </div>
       <h2 class= "text-danger text-uppercase" id="series">Serie tv</h2>
-      <div class="row">        
+      <div class="row">
       <div
-        class="col-12 bg-black d-flex flex-row flex-wrap">          
-          <CardComponent
+        class="col-12 bg-black d-flex flex-row flex-wrap">
+         <CardComponent
             v-for="(item, index) in store.seriesList"
             :title="item.name"
             :vote="item.vote_average"

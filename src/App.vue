@@ -5,7 +5,7 @@
     <div class="hero-content">
       <!-- <h2 class="text-light text-center">Serie TV in evidenza</h2> -->
       <div class="content-video">
-        <video autoplay controls
+        <video autoplay controls muted
          class="position-absolute">
           <source
             src="/video/SUBURRÆTERNA _ Trailer ufficiale _ Netflix Italia.mp4"
@@ -76,32 +76,33 @@ export default {
       const seriesUrl = store.apiUrl + this.store.endPoint.series;
       axios.get(seriesUrl, { params: this.store.params }).then((res) => {
         this.store.seriesList = res.data.results;
-      });
-    },
+      }).catch(function (error){
+console.log(error)
+      }).finally(function(){})
   },
   created() {
     this.getMovies();
     this.getSeries();
   },
-};
+}}
 </script>
 
 <style lang="scss" scoped>
 header {
   width: 100%;
-height: 420px;
+height: 520px;
 }
 
 
 main {
   width: 100%;
-  height: calc(100% - 500px);
+  height: calc(100% - 520px);
 }
 video {
   width: 100%;
   object-fit: cover;
   display: block;
-  height: 350px;
+  height: 450px;
   position: relative;
 }
 
@@ -119,7 +120,10 @@ video {
 }
 
 @media screen and (max-width:850px){
-    
+    header{
+      font-size: 0.6rem;
+      
+    }
   .btn{
     display: none;
   }
