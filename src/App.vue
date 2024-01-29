@@ -42,7 +42,7 @@
 <script>
 import axios from "axios";
 import { store } from "./data/store.js";
-import MainComponent from "./components/MainComponent.vue";
+import MainComponent from "./components/maincomponent.vue";
 import HeaderComponent from "./components/HeaderComponent.vue";
 export default {
   name: "App",
