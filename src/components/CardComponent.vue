@@ -73,16 +73,16 @@ export default {
     getCover() {
       let cover;
       if (!this.poster_path) {
-        cover = "/img/netflix.png";
+        cover = "./img/netflix.png";
       } else {
         cover = `https://image.tmdb.org/t/p/w300` + this.poster_path;
       }
       return cover;
     },
     getFlag() {
-      let flag = `/img/${this.language}.svg`;
+      let flag = `./img/${this.language}.svg`;
       if (!this.flags.includes(this.language)) {
-        flag = "/img/null.png";
+        flag = "./img/null.png";
       }
       return flag;
     },
